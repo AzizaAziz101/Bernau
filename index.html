@@ -109,6 +109,27 @@
 }
 
 
+@keyframes elegantChatIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.92) translateY(30px);
+    filter: blur(4px);
+  }
+  60% {
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: blur(0);
+  }
+}
+
+.chat-elegant-in {
+  animation: elegantChatIn 0.5s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+}
+
+
 </style>
 </head>
 <body class="bg-[#202020] text-[#f5f5f5] font-['Segoe_UI'] relative min-h-screen">
@@ -257,13 +278,14 @@
 
   <!-- Modal -->
   <div id="chatModal" class="fixed inset-0 bg-black/70 flex justify-center items-center z-50 hidden">
-    <div class="bg-[#0f0f0f] w-full max-w-[650px] rounded-2xl shadow-2xl p-6 relative flex flex-col items-center">
+  <div class="modal-content bg-[#0f0f0f] w-full max-w-[650px] rounded-2xl shadow-2xl p-6 relative flex flex-col items-center">
+
       <!-- Close Button -->
       <button id="closeChat" class="absolute top-3 right-4 text-[#ccc] text-2xl font-bold hover:text-white">&times;</button>
 
       <!-- Chat Content -->
       <header class="text-center mb-6">
-        <h1 class="text-[1.7rem] text-cyan-500 font-semibold tracking-wider">Willkommen bei Luminous</h1>
+        <h1 class="text-[1.7rem] text-cyan-500 font-semibold tracking-wider">Willkommen bei Azisza.s.i.x</h1>
       </header>
 
 
@@ -321,8 +343,18 @@
     const modal = document.getElementById("chatModal");
 
     openBtn.addEventListener("click", () => {
-      modal.classList.remove("hidden");
-    });
+  modal.classList.remove("hidden");
+
+  const modalContent = modal.querySelector(".modal-content");
+  if (modalContent) {
+    modalContent.classList.remove("chat-elegant-in"); // Reset animation
+    void modalContent.offsetWidth; // Trigger reflow
+    modalContent.classList.add("chat-elegant-in");
+  }
+});
+
+    
+
 
     closeBtn.addEventListener("click", () => {
       modal.classList.add("hidden");
