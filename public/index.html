@@ -10,11 +10,11 @@
 @keyframes fade-in-slow {
     0% {
       opacity: 0;
-      transform: scale(0.95);
+      transform: scale(0.5);
     }
     100% {
       opacity: 1;
-      transform: scale(1);
+      transform: scale(0.8);
     }
   }
 
@@ -25,12 +25,12 @@
     @keyframes button-fade-bounce {
     0% {
       opacity: 0;
-      transform: scale(0.95);
+      transform: scale(1);
       border-color: transparent;
     }
     100% {
       opacity: 1;
-      transform: scale(1);
+      transform: scale(1.4);
       border-color: rgba(255, 255, 255, 0.1);
     }
   }
@@ -130,13 +130,60 @@
 }
 
 
+    body {
+      margin: 0;
+      background: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    .header {
+      position: relative;
+      height: 27vh; /* responsive Höhe */
+      background: transparent;
+      overflow: hidden;
+    }
+
+    .glaze {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 0;
+      background: #ff69b4; /* pink */
+      clip-path: url(#waveClip);
+      animation: flowDown 2.5s forwards ease-out;
+    }
+
+    @keyframes flowDown {
+      from {
+        height: 0;
+      }
+      to {
+        height: 100%;
+      }
+    }
+
+    .content {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .content {
+        padding: 1rem;
+      }
+
+      .header {
+        height: 25vh;
+      }
+    }
 </style>
 </head>
-<body class="bg-[#202020] text-[#f5f5f5] font-['Segoe_UI'] relative min-h-screen">
+<body class="bg-white text-[#fffff] font-['Segoe_UI'] relative min-h-screen">
 
 
   <!-- Header -->
-<header class="bg-[#202020] px-6 py-4 text-base">
+<header class="bg-[#ffffff] px-6 py-4 text-base">
   <div class="flex justify-between items-center whitespace-nowrap overflow-x-auto">
     <a href="index.html" class="text-pink-500 font-medium text-lg mr-6">
       UXLAb.Europe
@@ -151,15 +198,37 @@
 </header>
 
 <!-- Promo-Banner -->
-<div class="text-center text-sm px-6 py-1.5 font-bold" style="background-color: #14b8a6">
+<div class="text-center text-white text-sm px-6 py-1.5 font-bold" style="background-color: #121313">
   <span class="promo-text-animate">New customer special – get 5% off your first order</span>
 </div>
 
 
 
+  <div class="header">
+    <div class="glaze"></div>
+  </div>
+
+  <!-- SVG ClipPath mit höheren Wellen (responsiv durch objectBoundingBox) -->
+  <svg width="0" height="0" style="position:absolute;">
+    <defs>
+      <clipPath id="waveClip" clipPathUnits="objectBoundingBox">
+        <path d="
+          M0,0
+          L1,0
+          L1,0.75
+          C0.92,0.95 0.82,0.65 0.72,0.85
+          C0.62,1.05 0.52,0.65 0.42,0.85
+          C0.32,1.05 0.22,0.65 0.12,0.85
+          C0.02,1.05 0,0.75 0,0.75
+          Z" />
+      </clipPath>
+    </defs>
+  </svg>
+
+
 <!-- Hauptbereich -->
-<main class="bg-[#232323] mx-auto px-4 py-6">
-  <div class="text-center mb-0">
+<main class="bg-[#ffffff] text-black mx-auto px-4 py-6">
+  <div class="text-center">
     <h1 class="text-2xl font-bold mb-4">Tingly Dounuts – Shine Bright Every Day</h1>
     <h2 class="text-pink-500 text-2xl font-bold mb-6">Azisza.s.i.x<h2></h2>
 
@@ -167,7 +236,7 @@
 
 <div class="mb-2 max-w-5xl mx-auto px-4">
   <img
-    src="Dounut.jpg"
+    src="Thara.jpg"
     alt="Beautiful scene"
     class="w-3/4 mx-auto rounded-3xl animate-fade-in-slow"
   />
@@ -181,20 +250,21 @@
 
 <div class="mx-auto px-6 md:px-16 py-6">
   <p class="mb-8 leading-relaxed font-semibold">
-    At Luminous, we enhance your natural beauty with expert services in tooth gems, whitening, and lash styling — all delivered with precision and care.
+    At Sweet Loop, we delight your taste buds with handcrafted donuts, premium ingredients, and irresistible flavors — all made fresh with love and care.
   </p>
   <p class="mb-10 leading-relaxed font-semibold">
-    We’re passionate about helping you feel confident and radiant, using high-quality materials and safe, trend-forward techniques.
+    We’re passionate about making your day sweeter, offering delicious treats made with high-quality ingredients and creative, on-trend recipes.
   </p>
 
-  <h3 class="text-2xl font-bold mb-6">Why Luminous?</h3>
+  <h3 class="text-2xl font-bold mb-6">Why Sweet Loop?</h3>
   <p class="mb-10 leading-relaxed font-semibold">
-    Our mission is to boost your confidence through modern beauty treatments tailored to your unique style. Whether you're adding a sparkling tooth gem, brightening your smile, or enhancing your lashes, we create results that stand out.
+    Our mission is to bring joy through freshly baked donuts that match your cravings and style. Whether you're picking a classic glaze, trying a bold new flavor, or grabbing a box to share, we deliver moments that stand out.
   </p>
   <p class="mb-12 leading-relaxed font-semibold">
-    At Luminous, we combine expertise with artistry, offering flexible appointments, gentle products, and a comfortable experience every time. Your glow-up starts here.
+    At Sweet Loop, we blend baking expertise with creativity, offering seasonal specials, friendly service, and a cozy atmosphere every time. Your sweet moment starts here.
   </p>
 </div>
+
 
 <!-- Tabelle -->
 <div class="overflow-x-auto max-w-3xl mx-auto text-gray-800 text-lg">
@@ -233,9 +303,9 @@
 </main>
 
 <!-- Engagement-Bereich mit hellblauem Vollbild-Hintergrund ohne äußeres Padding -->
-<section class="bg-[#202020] py-7">
+<section class="bg-white text-black py-7">
   <div class="w-full max-w-3xl mx-auto px-4">
-    <h2 class="text-2xl font-semibold text-gray-200 mb-4 text-center">Our Commitment to Beauty</h2>
+    <h2 class="text-2xl font-semibold text-black mb-4 text-center">Our Commitment to Beauty</h2>
     <p class="font-semibold text-gray-500 mb-4 text-center">
       At Luminous, you are our priority. We believe that beauty boosts confidence and enhances your everyday life.
     </p>
@@ -263,7 +333,7 @@
     />
   </div>
 
-<div class="bg-[#202020] font-semibold text-center text-[#B98B85] px-4" style="margin-top: 20px; padding-top: 0px; padding-bottom: 4px;">
+<div class="bg-white font-semibold text-center text-black px-4" style="margin-top: 20px; padding-top: 0px; padding-bottom: 4px;">
   <p style="margin-bottom: 2px;">
     Because your hands deserve more than just color – they deserve care, elegance, and a little everyday magic.
   </p>
