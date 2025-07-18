@@ -10,11 +10,11 @@
 @keyframes fade-in-slow {
     0% {
       opacity: 0;
-      transform: scale(0.7777);
+      transform: scale(0.5);
     }
     100% {
       opacity: 1;
-      transform: scale(1.0);
+      transform: scale(0.8);
     }
   }
 
@@ -36,7 +36,7 @@
   }
 
   .animate-button-entry {
-    animation: button-fade-bounce 0.1s ease-out forwards;
+    animation: button-fade-bounce 0.4s ease-out forwards;
   }
 
   .custom-border {
@@ -78,7 +78,7 @@
     transform: scale(1);
   }
   50% {
-    transform: scale(1.13); /* dezente Vergrößerung */
+    transform: scale(1.12); /* dezente Vergrößerung */
   }
   100% {
     transform: scale(1);
@@ -86,7 +86,7 @@
 }
 
 .pulse-grow-once {
-  animation: pulse-scale 0.4s ease-out forwards;
+  animation: pulse-scale 0.5s ease-out forwards;
 }
 
 
@@ -103,7 +103,7 @@
 
 .promo-text-animate {
   display: inline-block;
-  animation: slide-in-left 0.3s ease-out forwards;
+  animation: slide-in-left 0.4s ease-out forwards;
   animation-delay: 1.2s;
   opacity: 0;
 }
@@ -132,7 +132,7 @@
 
     body {
       margin: 0;
-      background: #a0d3eb;
+      background: #a2d6ee;
       font-family: Arial, sans-serif;
     }
 
@@ -152,7 +152,7 @@
       background: #ee86ba; /* pink */
       clip-path: url(#waveClip);
       animation: flowDown 2.5s forwards ease-out;
-      animation-delay: 1.22s;
+      animation-delay: 2.4s;
     }
 
     @keyframes flowDown {
@@ -182,8 +182,9 @@
 </head>
 <body class="text-[#fffff] font-['Segoe_UI'] relative min-h-screen">
 
+
   <!-- Header -->
-<header class="bg-[#ee86ba] px-6 py-4 text-base">
+<header class="bg-[#a2d6ee] px-6 py-4 text-base">
   <div class="flex justify-between items-center whitespace-nowrap overflow-x-auto">
     <a href="index.html" class="text-pink-500 font-medium text-lg mr-6">
       TinglyDonuts.com
@@ -198,7 +199,7 @@
 </header>
 
 <!-- Promo-Banner -->
-<div class="text-center text-white text-sm px-6 py-1.5 font-bold" style="background-color: #ee86ba">
+<div class="text-center text-white text-sm px-6 py-1.5 font-bold" style="background-color: #121313">
   <span class="promo-text-animate">New customer special – get 5% off your first order</span>
 </div>
 
@@ -225,8 +226,10 @@
     </defs>
   </svg>
 
+
 <!-- Hauptbereich -->
-<main class="text-black mx-auto px-4 py-6">
+<main class=
+text-black mx-auto px-4 py-6">
   <div class="text-center">
     <h1 class="text-2xl font-bold mb-4">Tingly Dounuts – Shine Bright Every Day</h1>
     <h2 class="text-pink-500 text-2xl font-bold mb-6"><h2></h2>
@@ -301,22 +304,22 @@
 
 
 </main>
-<main class="bg-[#14b8a6]">
+
 <!-- Engagement-Bereich mit hellblauem Vollbild-Hintergrund ohne äußeres Padding -->
-<section class="bg-[#14b8a6] text-black py-7">
+<section class="bg-[#a2d6ee] text-black py-7">
   <div class="w-full max-w-3xl mx-auto px-4">
-    <h2 class="text-2xl font-semibold text-black mb-8 text-center">Our Commitment to Beauty</h2>
-    <p class="font-semibold text-black mb-4 text-center">
+    <h2 class="text-2xl font-semibold text-black mb-4 text-center">Our Commitment to Beauty</h2>
+    <p class="font-semibold text-gray-500 mb-4 text-center">
       At Luminous, you are our priority. We believe that beauty boosts confidence and enhances your everyday life.
     </p>
-    <p class="font-semibold text-black text-center">
+    <p class="font-semibold text-gray-500 text-center">
       With our reliable team and modern treatments, we deliver stunning, hygienic results – professionally, consciously, and with a touch of glam.
     </p>
   </div>
 </section>
 
 
-  <div class="bg-[#14b8a6] py-5 mb-20 min-h-[425px] relative max-w-xs w-full mx-auto h-auto">
+  <div class="bg- py-5 mb-20 min-h-[425px] relative max-w-xs w-full mx-auto h-auto">
     <!-- Unteres Bild -->
     <img
       src="Softdrinks.jpg"
@@ -333,14 +336,11 @@
     />
   </div>
 
-  <section class="bg-[#a0d3eb] text-black py-7">
-  <div class="w-full max-w-3xl mx-auto px-4">
-    <p class="font-semibold text-black mt-10 mb-0 text-center">
-      Because your hands deserve more than just color – they deserve care, elegance, and a little everyday magic.
-    </p>
-  </div>
-</section>
-</main>
+<div class="bg-[#a2d6ee] font-semibold text-center text-black px-4" style="margin-top: 20px; padding-top: 0px; padding-bottom: 4px;">
+  <p style="margin-bottom: 2px;">
+    Because your hands deserve more than just color – they deserve care, elegance, and a little everyday magic.
+  </p>
+</div>
 
 <!-- Chat öffnen Button -->
 <button id="openChat"
@@ -372,7 +372,7 @@
   </div>
 
   <!-- Stylish Footer for Luminous -->
-<footer class="bg-cyan-500 mt-16 text-sm text-white py-6">
+<footer class="bg-[#14b8a6] mt-16 text-sm text-white py-6">
   <div class="max-w-5xl mx-auto px-6 text-center space-y-4">
     <p class="text-base font-semibold text-gray-800">
       &copy; 2025 Luminous – Radiant clean. Sustainably maintained.
